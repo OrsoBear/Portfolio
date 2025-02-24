@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meltine cone.</title>
+  	<link rel="stylesheet" href="src/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="style.css">
+  	<link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+  	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  	<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/cowicon.png">
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+		}
+		canvas {
+			position: relative;
+			position: relative;
+    		background: white;
+    		padding: 12px;
+    		border: 1px solid black;
+    		box-sizing: content-box;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="dx" width=735 height=500></canvas>
+	<script type="module">
+		import Sequencer from './js/sequencer.min.js';
+
+		Sequencer.make({
+			canvas       	 : document.querySelector("#dx"),
+			from         	 : "img/File1.png",
+			to           	 : "img/File117.png",
+			direction        : "-x",
+			playMode         : "hover",
+			loop         	 : "loop",
+		});
+	</script>
+</body>
+</html>
